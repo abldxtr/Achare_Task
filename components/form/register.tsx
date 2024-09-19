@@ -192,10 +192,12 @@ export function InputForm() {
                     render={({ field }) => (
                       <FormItem className=" w-full lg:w-[222px] relative ">
                         {/* <FormItem className=" w-full  relative "> */}
-                        <FormLabel className=" font-medium text-[14px] leading-[21.88px] text-[#37474F] ">
-                          شماره تلفن ثابت
-                          <span className=" font-medium text-[12px] leading-[18.75px] md:text-[10px] md:leading-[15.63px] text-[#37474F] ">
-                            (اختیاری)
+                        <FormLabel className=" font-medium text-[14px] leading-[21.88px] text-[#37474F] flex items-center justify-between ">
+                          <span>
+                            شماره تلفن ثابت
+                            <span className=" font-medium text-[12px] leading-[18.75px] md:text-[10px] md:leading-[15.63px] text-[#37474F] ">
+                              (اختیاری)
+                            </span>
                           </span>
                           <div className=" mr-atuo font-normal text-[12px] leading-[18.75px] text-[#757575] md:text-[10px] md:leading-[15.63px] md:text-[#37474F] ">
                             *با پیش شماره

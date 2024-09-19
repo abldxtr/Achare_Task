@@ -8,4 +8,6 @@ export default async function GetAddress() {
   });
 
   const data = await res.json();
+  // console.log("address get", data);
+  return data;
 }

@@ -129,7 +129,7 @@ export function MapCor() {
             انتخاب آدرس
           </div>
         </div>
-        <div className="relative w-full h-full sm:h-[400px] md:h-[418px] md:rounded-[4px]  overflow-hidden border border-gray-200 shadow-md ">
+        <div className="relative w-full h-full sm:h-[400px] md:h-[380px] md:rounded-[4px]  overflow-hidden border border-gray-200 shadow-md ">
           <div className=" sticky top-0 w-full bg-[#FFFFFFCC]  ">
             <p className=" font-bold text-[12px] text-[#37474F] leading-[32px] pr-12 py-[10px] hidden sm:block ">
               موقعیت موردنظر خود را روی نقشه مشخص کنید.
