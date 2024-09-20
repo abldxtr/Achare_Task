@@ -163,6 +163,7 @@ export function InputForm() {
                           <Input
                             placeholder="مثال: 09382134973"
                             {...field}
+                            // type="number"
                             className=" border border-[#D4D4D4] focus:border-[#00BFA5] w-full lg:w-[222px] h-[46px] bg-white
                    placeholder:text-[#B6B6B6] placeholder:text-[14px] placeholder:font-normal outline-none focus-within:outline-none
                    focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-ring focus-visible:ring-offset-0
@@ -179,6 +180,17 @@ export function InputForm() {
                             <Icons.close />
                           </div>
                         )}
+
+                        {/* {!!mobile && (
+                          <div
+                            className=" absolute lg:left-12 left-4 top-[39px] cursor-pointer  "
+                            onClick={() => {
+                              form.setValue("mobile", "");
+                            }}
+                          >
+                            <Icons.close />
+                          </div>
+                        )} */}
 
                         <FormMessage className=" text-[#E61236] font-normal text-[10px] leading-[32px] !mt-[0px] " />
                       </FormItem>
@@ -207,13 +219,14 @@ export function InputForm() {
                           <Input
                             placeholder="مثال: 02155840325"
                             {...field}
+                            // type="number"
                             className=" border border-[#D4D4D4] focus:border-[#00BFA5] h-[46px] bg-white
                    placeholder:text-[#B6B6B6] placeholder:text-[14px] placeholder:font-normal outline-none focus-within:outline-none
                    focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-ring focus-visible:ring-offset-0 w-full lg:w-[222px]
                    "
                           />
                         </FormControl>
-                        {constmobile.trim().length > 0 && (
+                        {!!constmobile && constmobile.trim().length > 0 && (
                           <div
                             className=" absolute lg:left-2 left-4 top-[39px] cursor-pointer  "
                             onClick={() => {
@@ -223,6 +236,16 @@ export function InputForm() {
                             <Icons.close />
                           </div>
                         )}
+                        {/* {!!constmobile && (
+                          <div
+                            className=" absolute lg:left-2 left-4 top-[39px] cursor-pointer  "
+                            onClick={() => {
+                              form.setValue("constmobile", undefined);
+                            }}
+                          >
+                            <Icons.close />
+                          </div>
+                        )} */}
 
                         <FormMessage className=" text-[#E61236]  font-normal text-[10px] leading-[32px] !mt-[0px] " />
                       </FormItem>

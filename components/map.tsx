@@ -98,12 +98,17 @@ export function MapCor() {
   };
 
   function backHandler() {
-    startTransition(() => {
-      setNext(false);
-    });
+    // startTransition(() => {
+    setNext(false);
+    // });
   }
 
   const submitAction = async () => {
+    // if (!!finalState?.lat) {
+    //   toast.error("مختصات محل خود رو تعیین کنید");
+    //   return;
+    // }
+
     startTransition(async () => {
       if (finalState) {
         const res = await Register(finalState);
@@ -113,6 +118,8 @@ export function MapCor() {
         if (res.errors) {
           toast.error(res.errors);
         }
+      } else {
+        toast.error("مختصات محل خود رو تعیین کنید");
       }
     });
   };
@@ -158,7 +165,7 @@ export function MapCor() {
           <Button
             type="submit"
             onClick={submitAction}
-            className=" h-[46px]  !hover:bg-[#00BFA5] w-[224px] bg-[#00BFA5] flex items-center justify-center font-bold text-[16px] leading-[25px] rounded-[4px] "
+            className=" md:h-[46px]  !hover:bg-[#00BFA5] md:w-[224px] w-[343px] h-[48px] bg-[#00BFA5] flex items-center justify-center font-bold text-[16px] leading-[25px] rounded-[4px] "
           >
             {isPending ? (
               <BeatLoader size={5} color="#ffffff" />
