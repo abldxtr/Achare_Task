@@ -7,9 +7,7 @@ import { Toaster, toast } from "sonner";
 
 import { Icons } from "./Icons";
 import { useGlobalstate } from "@/context/globalContext";
-import SendButton from "./form/send-button";
 import { BeatLoader } from "react-spinners";
-import classNames from "classnames";
 import { Register } from "@/lib/actions";
 import { Button } from "./ui/button";
 
@@ -17,16 +15,8 @@ export function MapCor() {
   const MAPTILER_API_KEY =
     process.env.NEXT_PUBLIC_MAPTILER_API_KEY || "Gh8jJbn8EzD69h4Ra7Ov";
 
-  const {
-    next,
-    setNext,
-    registerState,
-    setRegisterState,
-    finalState,
-    setFinalState,
-    setSuccessState,
-    successState,
-  } = useGlobalstate();
+  const { setNext, registerState, finalState, setFinalState, setSuccessState } =
+    useGlobalstate();
   const [isPending, startTransition] = useTransition();
 
   const mapContainer = useRef<HTMLDivElement>(null);
