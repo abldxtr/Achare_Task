@@ -5,8 +5,6 @@ import { FormSchemaWithExtras } from "./schemas";
 import { error } from "console";
 
 export async function Register(values: z.infer<typeof FormSchemaWithExtras>) {
-  // const { userId, username } = await getUserId();
-
   const validatedFields = FormSchemaWithExtras.safeParse(values);
 
   if (!validatedFields.success) {
@@ -30,7 +28,6 @@ export async function Register(values: z.infer<typeof FormSchemaWithExtras>) {
   // console.log("data", data);
 
   try {
-    //   const result = await uploadImg({ image: fileUrl });
     const response = await fetch(
       "https://stage.achareh.ir/api/karfarmas/address",
       {
