@@ -4,10 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
-// import { toast } from "@/components/hooks/use-toast";
-import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Label } from "@/components/ui/label";
 import {
   Form,
   FormControl,
@@ -23,7 +20,6 @@ import { FormSchema } from "@/lib/schemas";
 import SendButton from "./send-button";
 import { useGlobalstate } from "@/context/globalContext";
 import { useEffect, useTransition } from "react";
-import classNames from "classnames";
 
 export function InputForm() {
   const { next, setNext, registerState, setRegisterState } = useGlobalstate();
@@ -100,7 +96,7 @@ export function InputForm() {
                             className=" border border-[#D4D4D4] focus:border-[#00BFA5]  h-[46px] bg-white
                    placeholder:text-[#B6B6B6] placeholder:text-[14px] placeholder:font-normal outline-none focus-within:outline-none
                    focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-ring focus-visible:ring-offset-0
-                   w-full lg:w-[222px] relative
+                   w-full lg:w-[222px] relative !caret-[#00BFA5]
                    "
                           />
                         </FormControl>
@@ -133,7 +129,7 @@ export function InputForm() {
                             {...field}
                             className=" border border-[#D4D4D4] focus:border-[#00BFA5] w-full lg:w-[222px]  h-[46px] bg-white
                    placeholder:text-[#B6B6B6] placeholder:text-[14px] placeholder:font-normal outline-none focus-within:outline-none
-                   focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-ring focus-visible:ring-offset-0
+                   focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-ring focus-visible:ring-offset-0 !caret-[#00BFA5]
                    "
                           />
                         </FormControl>
@@ -166,7 +162,7 @@ export function InputForm() {
                             // type="number"
                             className=" border border-[#D4D4D4] focus:border-[#00BFA5] w-full lg:w-[222px] h-[46px] bg-white
                    placeholder:text-[#B6B6B6] placeholder:text-[14px] placeholder:font-normal outline-none focus-within:outline-none
-                   focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-ring focus-visible:ring-offset-0
+                   focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-ring focus-visible:ring-offset-0 !caret-[#00BFA5]
                    "
                           />
                         </FormControl>
@@ -222,7 +218,7 @@ export function InputForm() {
                             // type="number"
                             className=" border border-[#D4D4D4] focus:border-[#00BFA5] h-[46px] bg-white
                    placeholder:text-[#B6B6B6] placeholder:text-[14px] placeholder:font-normal outline-none focus-within:outline-none
-                   focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-ring focus-visible:ring-offset-0 w-full lg:w-[222px]
+                   focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-ring focus-visible:ring-offset-0 w-full lg:w-[222px] !caret-[#00BFA5]
                    "
                           />
                         </FormControl>
@@ -236,16 +232,6 @@ export function InputForm() {
                             <Icons.close />
                           </div>
                         )}
-                        {/* {!!constmobile && (
-                          <div
-                            className=" absolute lg:left-2 left-4 top-[39px] cursor-pointer  "
-                            onClick={() => {
-                              form.setValue("constmobile", undefined);
-                            }}
-                          >
-                            <Icons.close />
-                          </div>
-                        )} */}
 
                         <FormMessage className=" text-[#E61236]  font-normal text-[10px] leading-[32px] !mt-[0px] " />
                       </FormItem>
@@ -265,7 +251,7 @@ export function InputForm() {
                             {...field}
                             className=" border border-[#D4D4D4] focus:border-[#00BFA5] h-[46px] bg-white
                    placeholder:text-[#B6B6B6] placeholder:text-[14px] placeholder:font-normal outline-none focus-within:outline-none
-                   focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-ring focus-visible:ring-offset-0 lg:w-[480px] w-full
+                   focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-ring focus-visible:ring-offset-0 lg:w-[480px] w-full !caret-[#00BFA5]
                    "
                           />
                         </FormControl>

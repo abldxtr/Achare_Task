@@ -116,7 +116,7 @@ export function MapCor() {
 
   return (
     <>
-      <div className="flex flex-col items-center md:pt-[22px]  md:p-4 w-full max-w-4xl mx-auto h-[calc(100vh_-_48px)] ">
+      <div className="flex flex-col items-center md:pt-[22px]  md:p-4 w-full max-w-4xl mx-auto h-[calc(100vh_-_48px)] md:h-[calc(100vh_-_74px)] ">
         <div className=" sm:flex items-center gap-2 w-full justify-start hidden ">
           {/* svg */}
           <div className=" cursor-pointer " onClick={backHandler}>
